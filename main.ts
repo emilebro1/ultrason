@@ -5,9 +5,53 @@ basic.forever(function () {
     DigitalPin.P1,
     PingUnit.Centimeters
     )
-    if (distance < 10) {
-        basic.showIcon(IconNames.No)
+    if (distance == 12) {
+        basic.showLeds(`
+            # # # # #
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (distance == 10) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (distance == 8) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            . . . . .
+            . . . . .
+            `)
+    } else if (distance == 6) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            . . . . .
+            `)
+    } else if (distance == 4) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
     } else {
-        basic.showIcon(IconNames.Yes)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
     }
 })
